@@ -1,0 +1,194 @@
+.app {
+  font-family: "Playfair Display", serif;
+  // cursor: none;
+
+  //navbar
+  .navbar {
+    padding-top: 27px;
+    background-color: "transparent";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    .brand {
+      h1 {
+        color: #cf332b;
+        font-weight: bolder;
+      }
+      img {
+        height: 5rem;
+      }
+    }
+    .nav-link {
+      color: black;
+      text-decoration: none;
+    }
+    .list_item {
+      text-decoration: none;
+      margin-right: 2rem;
+      position: relative;
+      transition: all 200ms linear;
+      color: #35373a;
+      font-size: 17px;
+    }
+    .list_item:hover {
+      color: #8167a9 !important;
+    }
+
+    .hire-me-button {
+      font-size: 16px;
+      color: #fff;
+      text-decoration: none;
+      width: 110px;
+      height: 40px;
+      border: none;
+      outline: none;
+      background: #ec5b53;
+      cursor: pointer;
+      position: relative;
+      z-index: 0;
+      text-align: center;
+      align-items: center;
+      border-radius: 5px;
+      padding: 5px;
+    }
+    .hire-me-button:hover {
+      background: #cf332b;
+    }
+    &.expanded {
+      .basic-navbar-nav {
+        background-color: white;
+        width: 100%;
+      }
+      .list_item {
+        margin: 0.5rem 0;
+      }
+    }
+  }
+
+  //footer
+  .footer {
+    background-color: #002d5b;
+    height: 250px;
+    text-align: center;
+    color: #fff;
+    .social {
+      margin: auto;
+      padding: 45px 0;
+      align-items: center;
+      .social-logo a {
+        margin-right: 30px;
+        color: #fff;
+      }
+
+      .mail {
+        font-size: 24px;
+        font-weight: bold;
+        font-family: "Playfair Display", serif;
+      }
+
+      .main_logo {
+        h1 {
+          font-size: 40px;
+          color: #cf332b;
+          font-weight: bolder;
+        }
+      }
+    }
+
+    .copyright {
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    @media (max-width: 768px) {
+      height: auto;
+      .social {
+        .social-logo a {
+          .social-icon-logof {
+            font-size: 30px;
+          }
+        }
+      }
+    }
+  }
+
+  //header
+  .header {
+    height: 70vh;
+    padding-top: 104px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    &::before {
+      content: "";
+      background-image: url(https://websitedemos.net/portfolio-02/wp-content/uploads/sites/864/2021/05/bg-02-free-img.png);
+      background-position: top right;
+      background-repeat: no-repeat;
+      opacity: 0.3;
+      transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+
+    .heading {
+      font-size: 90px;
+      font-weight: bold;
+      position: absolute;
+      left: 10%;
+      color: #002d5b;
+    }
+  }
+
+  .navigator {
+    width: 80%;
+    margin: 10rem auto;
+    display: flex;
+    justify-content: flex-end;
+    h1 {
+      font-size: 60px;
+      color: #002d5b;
+      font-weight: bold;
+    }
+    .arrow-right {
+      color: #cf332b;
+      font-size: 80px;
+      transform: "scale(1)";
+      transition: "transform 0.2s ease";
+    }
+    .arrow-right:hover {
+      transform: scale(1.2);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .navigator {
+      margin-top: 0;
+    }
+
+    .header {
+      height: 50vh;
+      &::before {
+        background-size: cover;
+      }
+
+      .heading {
+        padding-top: 30rem;
+        font-size: 45px;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    cursor: none;
+  }
+}

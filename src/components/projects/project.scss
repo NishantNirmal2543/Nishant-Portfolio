@@ -1,0 +1,125 @@
+.projects-section {
+  margin: 7rem 0;
+  padding: 100px 0;
+  text-align: center;
+  // background-color: #f8f8f8;
+}
+
+.section-title {
+  font-size: 3rem;
+  margin-bottom: 5rem;
+  color: #002d5b;
+}
+
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.project-card {
+  width: 350px;
+}
+
+.project-image {
+  position: relative;
+  width: 100%;
+  height: 250px; /* Adjust the height as desired */
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 2s, box-shadow 0.3s;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    border: 3px solid #fff;
+
+    .project-overlay {
+      transform: translateY(0);
+      opacity: 1;
+      height: 100%;
+    }
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .project-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 0, 0, 0.8),
+      rgba(0, 0, 255, 0.8)
+    );
+    color: #fff;
+    transform: translateY(100%);
+    opacity: 0;
+    transition: transform 0.3s, opacity 0.3s;
+
+    &:hover {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    .project-title {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+      color: #fff;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      transform: translateY(-20px);
+      opacity: 0;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+      text-decoration: underline;
+    }
+
+    .project-description {
+      padding: 10px 0;
+      font-size: 1rem;
+      margin-bottom: 15px;
+      color: #ddd;
+      transform: translateY(-20px);
+      opacity: 0;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .project-link {
+      display: inline-flex;
+      align-items: center;
+      font-weight: bold;
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.2s ease;
+
+      svg {
+        margin-right: 5px;
+      }
+
+      &:hover {
+        color: #ffcc00;
+      }
+    }
+
+    &:hover .project-title,
+    &:hover .project-description {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .projects .projects-section {
+    margin-top: 0;
+    margin-bottom: 5rem;
+  }
+}

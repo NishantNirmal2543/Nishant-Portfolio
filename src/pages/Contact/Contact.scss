@@ -1,0 +1,183 @@
+.contact {
+  position: relative;
+  min-height: 100vh;
+
+  .header {
+    height: 70vh;
+    padding-top: 104px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    &::before {
+      content: "";
+      background-image: url(https://websitedemos.net/portfolio-02/wp-content/uploads/sites/864/2021/05/bg-02-free-img.png);
+      background-position: top right;
+      background-repeat: no-repeat;
+      opacity: 0.3;
+      transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+      position: absolute;
+      top: 0;
+      left: 0rem;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+
+    /* Circular Image */
+    .profile-image {
+      padding: 20vh 0;
+      width: 55vh;
+      height: 55vh;
+      background-image: url("../../images/contact-profile.jpg");
+      background-size: cover;
+      border-radius: 50%;
+      position: absolute;
+      top: 75%;
+      left: 55%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+
+      animation: floatingAnimation 5s ease-in-out infinite alternate;
+
+      background-size: 120%;
+      transition: background-size 2s ease;
+
+      &:hover {
+        background-size: 130%;
+      }
+    }
+  }
+
+  .contact-form {
+    padding: 200px 0;
+    width: 80%;
+    margin: auto;
+    color: #002d5b;
+
+    .contact-info {
+      h1 {
+        font-weight: bold;
+        font-size: 54px;
+        padding-top: 100px;
+      }
+    }
+    span {
+      color: #cf332b;
+    }
+
+    .form-control {
+      height: 50px;
+      background-color: #f6f8fa;
+      border: 1px solid #ccc;
+    }
+    .form-field {
+      /* Add the form field animation */
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+
+      &:focus {
+        border-color: #3498db;
+        box-shadow: 0 0 8px #3498db;
+      }
+    }
+
+    textarea.form-control {
+      height: 100px;
+      background-color: #f6f8fa;
+      border: 1px solid #ccc;
+    }
+
+    .submit-button {
+      .link {
+        color: #fff;
+        text-decoration: none;
+        font-size: 16px;
+      }
+      width: 110px;
+      height: 40px;
+      border: none;
+      outline: none;
+      background: #ec5b53;
+      cursor: pointer;
+      position: relative;
+      z-index: 0;
+      text-align: center;
+      align-items: center;
+      border-radius: 5px;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      opacity: 0;
+      animation: fadeInAnimation 1s ease-in-out forwards;
+
+      &:hover {
+        background-color: #3498db;
+        transform: scale(1.1);
+      }
+    }
+    .submit-button:hover {
+      background: #cf332b; /* Change the background color on hover */
+    }
+  }
+}
+@keyframes scaleAnimation {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+@keyframes pulsateOpacityAnimation {
+  0% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.4;
+  }
+}
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes floatingAnimation {
+  0% {
+    transform: translate(-50%, -50%);
+  }
+  100% {
+    transform: translate(-50%, -53%);
+  }
+}
+
+@media (max-width: 768px) {
+  .contact {
+    .header {
+      height: 50vh;
+      &::before {
+        background-size: cover;
+      }
+      .profile-image {
+        padding: 0;
+        height: 250px;
+        width: 250px;
+        left: 50%;
+      }
+    }
+    .contact-form {
+      width: 100%;
+      padding-top: 70px;
+
+      .contact-info h1 {
+        font-size: 30px;
+      }
+    }
+  }
+}

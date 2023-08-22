@@ -1,0 +1,45 @@
+/* In EducationItem.scss */
+.education-item {
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  h3 {
+    margin: 0;
+    font-size: 18px;
+  }
+  p {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #555;
+  }
+
+  &.slide-from-left {
+    animation: slideFromLeft 1s ease;
+  }
+
+  &.slide-from-right {
+    animation: slideFromRight 1s ease;
+  }
+
+  @keyframes slideFromLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slideFromRight {
+    from {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+}
