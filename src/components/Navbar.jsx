@@ -33,7 +33,7 @@ const Navba = () => {
       expanded={navbarExpanded}>
       <Container>
         <Navbar.Brand className="brand" href="/">
-          <h1>Nishant</h1>
+          <h1>Nishant Nirmal</h1>
         </Navbar.Brand>
         <Navbar.Toggle
           aria-controls="basic-navbar-nav"

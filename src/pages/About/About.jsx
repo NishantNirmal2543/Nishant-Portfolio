@@ -144,11 +144,10 @@ const About = () => {
                 color: "#fff",
               }}
               icon={<School />}
-              date="2008-2018">
-              <h3>Secondary School Certificate</h3>
-              <p>ST. John's School, Rahata</p>
+              date="2020-2024">
+              <h3>B.E (Artificial Intelligence and Data Science)</h3>
+              <p>Dr. D.Y.Patil College of Engineering, Akurdi, Pune</p>
             </VerticalTimelineElement>
-
             <VerticalTimelineElement
               className="vertical-timeline-element--education"
               iconStyle={{
@@ -160,7 +159,6 @@ const About = () => {
               <h3>Higher Secondary Certificate</h3>
               <p>Sanjivani Junior College, Kopargaon</p>
             </VerticalTimelineElement>
-
             <VerticalTimelineElement
               className="vertical-timeline-element--education"
               iconStyle={{
@@ -168,9 +166,9 @@ const About = () => {
                 color: "#fff",
               }}
               icon={<School />}
-              date="2020-2024">
-              <h3>B.E (Artificial Intelligence and Data Science)</h3>
-              <p>Dr. D.Y.Patil College of Engineering, Akurdi, Pune</p>
+              date="2008-2018">
+              <h3>Secondary School Certificate</h3>
+              <p>ST. John's School, Rahata</p>
             </VerticalTimelineElement>
           </VerticalTimeline>
         </div>
